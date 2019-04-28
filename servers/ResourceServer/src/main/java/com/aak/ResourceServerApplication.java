@@ -20,8 +20,6 @@ import java.util.Collections;
 
 @SpringBootApplication
 @Configuration
-@EnableAutoConfiguration
-@ComponentScan
 public class ResourceServerApplication {
 	@Bean
 	public FilterRegistrationBean corsFilter() {
