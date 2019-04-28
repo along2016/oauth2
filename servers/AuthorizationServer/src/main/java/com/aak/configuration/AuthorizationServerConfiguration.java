@@ -22,6 +22,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
+
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource oauthDataSource() {

@@ -22,7 +22,6 @@ import javax.sql.DataSource;
 public class ResourcesServerConfiguration extends ResourceServerConfigurerAdapter {
 
     @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource oauthDataSource() {
         return DataSourceBuilder.create().build();
     }
