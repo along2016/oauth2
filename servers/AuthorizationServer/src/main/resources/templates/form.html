@@ -15,9 +15,7 @@
 <body>
 <div class="container">
     <h1 th:if="!${param.client}" class="page-header">Add client</h1>
-
     <h1 th:if="${param.client}" class="page-header">Edit client <span th:text="${param.client[0]}"></span></h1>
-
     <div class="row">
         <div class="col-xs-12 col-md-12">
             <div th:if="${param.client}" class="alert alert-warning">Editing a client will delete all user approvals and active tokens.</div>
@@ -94,7 +92,6 @@
                     <span data-toggle="tooltip" data-placement="bottom" class="glyphicon glyphicon-question-sign"
                           title="If you choose none, they default to authorization_code and refresh_token."></span>
                     </label>
-
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -107,13 +104,11 @@
                             <div class="panel-body">
                                 <ul>
                                     <li><b>client_credentials</b>
-
                                         <p>The client can get an access token without the user authorizing it from the /token endpoint using basic authentication with its id and
                                             secret.
                                             Only for trusted clients. See curl client example. The client secret must be set for this grant type. The admin can specify the roles
                                             the client will have on the resource
                                             servers.</p>
-
                                         <p>You could imagine a client script with an admin role but only read scope that runs on a trusted server of you and pulls some data
                                             periodically.</p>
                                     </li>
